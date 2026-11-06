@@ -63,7 +63,7 @@
     <header>
         <a href="/" class="logo">SeniorPies.pl</a>
         <div style="position: relative;">
-            <button class="menu-btn" onclick="toggleMenu()">☰ Poradniki</button>
+            <button class="menu-btn" onclick="toggleMenu(event)">☰ Poradniki</button>
             <div class="dropdown" id="menu">
                 <div class="dropdown-scroll">
                     <a href="/rampy.html">Jak wybrać rampę</a>
@@ -156,7 +156,8 @@
         <p>SeniorPies.pl – serwis informacyjny. Niektóre linki są afiliacyjne.</p>
     </footer>
     <script>
-        function toggleMenu() {
+        function toggleMenu(event) {
+            event.stopPropagation();
             document.getElementById("menu").classList.toggle("show");
         }
         window.onclick = function(event) {
