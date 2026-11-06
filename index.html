@@ -8,9 +8,14 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: #e0e0e0; background: #121212; }
-        nav { background: #1e1e1e; padding: 20px; text-align: center; border-bottom: 1px solid #333; }
-        nav a { margin: 0 15px; color: #a0c4a8; text-decoration: none; font-weight: 500; }
-        nav a:hover { color: #fff; }
+        header { background: #1e1e1e; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; }
+        .logo { color: #a0c4a8; font-weight: 600; text-decoration: none; font-size: 1.2rem; }
+        .menu-btn { background: #2a2a2a; border: 1px solid #444; color: #a0c4a8; padding: 8px 14px; border-radius: 8px; cursor: pointer; font-size: 0.95rem; }
+        .menu-btn:hover { background: #333; }
+        .dropdown { display: none; position: absolute; right: 20px; top: 60px; background: #1e1e1e; border: 1px solid #333; border-radius: 10px; min-width: 220px; z-index: 100; }
+        .dropdown a { display: block; padding: 12px 18px; color: #e0e0e0; text-decoration: none; }
+        .dropdown a:hover { background: #2a2a2a; }
+        .dropdown.show { display: block; }
         .hero {
             background: linear-gradient(135deg, #1a3a2a 0%, #2d5a3d 100%);
             color: white;
@@ -53,16 +58,21 @@
     </style>
 </head>
 <body>
-    <nav>
-        <a href="/">Strona główna</a>
-        <a href="/rampy.html">Rampy</a>
-        <a href="/legowiska.html">Legowiska</a>
-        <a href="/wozki.html">Wózki</a>
-        <a href="/suplementy.html">Suplementy</a>
-        <a href="/schody.html">Schody</a>
-        <a href="/panele.html">Panele</a>
-        <a href="/o-nas.html">O nas</a>
-    </nav>
+    <header>
+        <a href="/" class="logo">SeniorPies.pl</a>
+        <div style="position: relative;">
+            <button class="menu-btn" onclick="toggleMenu()">☰ Artykuły</button>
+            <div class="dropdown" id="menu">
+                <a href="/rampy.html">Jak wybrać rampę</a>
+                <a href="/legowiska.html">Legowiska ortopedyczne</a>
+                <a href="/wozki.html">Wózki dla psów</a>
+                <a href="/suplementy.html">Suplementy na stawy</a>
+                <a href="/schody.html">Jak pomóc psu na schodach</a>
+                <a href="/panele.html">Pies ślizga się na panelach</a>
+                <a href="/o-nas.html">O nas</a>
+            </div>
+        </div>
+    </header>
     <div class="hero">
         <span class="paw paw1">🐾</span>
         <span class="paw paw2">🐾</span>
@@ -139,5 +149,18 @@
     <footer>
         <p>SeniorPies.pl – serwis informacyjny. Niektóre linki są afiliacyjne.</p>
     </footer>
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("show");
+        }
+        window.onclick = function(event) {
+            if (!event.target.matches('.menu-btn')) {
+                var dropdown = document.getElementById("menu");
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
 </body>
 </html>
