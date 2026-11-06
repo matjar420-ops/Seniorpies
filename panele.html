@@ -26,16 +26,25 @@
     </style>
 </head>
 <body>
-    <nav>
-        <a href="/">Strona główna</a>
-        <a href="/rampy.html">Rampy</a>
-        <a href="/legowiska.html">Legowiska</a>
-        <a href="/wozki.html">Wózki</a>
-        <a href="/suplementy.html">Suplementy</a>
-        <a href="/schody.html">Schody</a>
-        <a href="/panele.html">Panele</a>
-        <a href="/o-nas.html">O nas</a>
-    </nav>
+    <header>
+        <a href="/" class="logo">SeniorPies.pl</a>
+        <div style="position: relative;">
+            <button class="menu-btn" onclick="toggleMenu()">☰ Poradniki</button>
+            <div class="dropdown" id="menu">
+                <div class="dropdown-scroll">
+                    <a href="/rampy.html">Jak wybrać rampę</a>
+                    <a href="/legowiska.html">Legowiska ortopedyczne</a>
+                    <a href="/wozki.html">Wózki dla psów</a>
+                    <a href="/suplementy.html">Suplementy na stawy</a>
+                    <a href="/schody.html">Jak pomóc psu na schodach</a>
+                    <a href="/panele.html">Pies ślizga się na panelach</a>
+                </div>
+                <div class="dropdown-footer">
+                    <a href="/o-nas.html">O nas</a>
+                </div>
+            </div>
+        </div>
+    </header>
     <div class="container">
         <h1>Pies senior ślizga się na panelach – jak mu pomóc</h1>
         <p>Starszy pies coraz częściej ślizga się na panelach, drewnianej podłodze lub płytkach. Łapy rozjeżdżają się, pies traci pewność siebie i zaczyna unikać niektórych pomieszczeń. To nie jest tylko „starość” – to problem, który można rozwiązać.</p>
