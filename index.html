@@ -3,57 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SeniorPies.pl – Mobilność i komfort psów seniorów</title>
-    <meta name="description" content="Praktyczne poradniki o rampach, legowiskach, wózkach i suplementach dla starszych psów. Porównania produktów i konkretne wskazówki.">
+    <title>SeniorPies.pl – Mobilność i komfort psa seniora</title>
+    <meta name="description" content="Praktyczne poradniki o mobilności i komforcie psów seniorów. Rampy, legowiska, wózki i suplementy.">
     <style>
-        body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
-        header { border-bottom: 2px solid #4a7c59; padding-bottom: 10px; margin-bottom: 30px; }
-        h1 { color: #2c5e3e; }
-        nav a { margin-right: 15px; color: #4a7c59; text-decoration: none; }
-        nav a:hover { text-decoration: underline; }
-        .problem { background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 20px 0; }
-        footer { margin-top: 50px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 0.9em; color: #666; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: #e0e0e0; background: #121212; }
+        nav { background: #1e1e1e; padding: 20px; text-align: center; border-bottom: 1px solid #333; }
+        nav a { margin: 0 15px; color: #a0c4a8; text-decoration: none; font-weight: 500; }
+        nav a:hover { color: #fff; }
+        .hero {
+            background: linear-gradient(135deg, #1a3a2a 0%, #2d5a3d 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 15px; }
+        .hero p { font-size: 1.2rem; opacity: 0.85; max-width: 600px; margin: 0 auto; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
+        .section-title { text-align: center; font-size: 1.8rem; color: #a0c4a8; margin-bottom: 40px; }
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card {
+            background: #1e1e1e;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #333;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .card:hover { transform: translateY(-5px); border-color: #4a7c59; }
+        .card-img { height: 180px; background: #2a2a2a; }
+        .card-img img { width: 100%; height: 100%; object-fit: cover; }
+        .card-content { padding: 25px; }
+        .card h3 { color: #a0c4a8; margin-bottom: 10px; }
+        .btn { display: inline-block; margin-top: 15px; background: #4a7c59; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; }
+        .btn:hover { background: #3d6b4a; }
+        footer { text-align: center; padding: 40px 20px; color: #666; font-size: 0.9rem; border-top: 1px solid #333; }
     </style>
 </head>
 <body>
-    <header>
+    <nav>
+        <a href="/">Strona główna</a>
+        <a href="/rampy.html">Rampy</a>
+        <a href="/legowiska.html">Legowiska</a>
+        <a href="/wozki.html">Wózki</a>
+        <a href="/suplementy.html">Suplementy</a>
+        <a href="/o-nas.html">O nas</a>
+    </nav>
+    <div class="hero">
         <h1>SeniorPies.pl</h1>
-        <nav>
-            <a href="/">Strona główna</a>
-            <a href="/rampy.html">Rampy</a>
-            <a href="/legowiska.html">Legowiska</a>
-            <a href="/wozki.html">Wózki</a>
-            <a href="/suplementy.html">Suplementy</a>
-        </nav>
-    </header>
-
-    <main>
-        <h2>Mobilność i komfort Twojego psa seniora</h2>
-        <p>Praktyczne poradniki, które pomagają właścicielom starszych psów rozwiązywać codzienne problemy z poruszaniem się i odpoczynkiem.</p>
-
-        <div class="problem">
-            <h3>Najczęstsze problemy:</h3>
-            <ul>
-                <li>Pies nie wskakuje do auta</li>
-                <li>Ma trudności ze wstawaniem</li>
-                <li>Potrzebuje podparcia podczas spaceru</li>
-                <li>Gorzej śpi</li>
-                <li>Ma problemy z higieną</li>
-            </ul>
+        <p>Pomagamy starszym psom żyć wygodniej. Praktyczne poradniki o mobilności i komforcie.</p>
+    </div>
+    <div class="container">
+        <h2 class="section-title">Poradniki</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://placehold.co/600x300/2a2a2a/a0c4a8?text=Rampa+przy+aucie" alt="Rampa dla psa">
+                </div>
+                <div class="card-content">
+                    <h3>Jak wybrać rampę</h3>
+                    <p>Praktyczny poradnik wyboru rampy do auta lub na schody.</p>
+                    <a href="/rampy.html" class="btn">Czytaj więcej</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://placehold.co/600x300/2a2a2a/a0c4a8?text=Pies+w+legowisku" alt="Legowisko ortopedyczne">
+                </div>
+                <div class="card-content">
+                    <h3>Legowiska ortopedyczne</h3>
+                    <p>Porównanie legowisk, które naprawdę pomagają stawom.</p>
+                    <a href="/legowiska.html" class="btn">Czytaj więcej</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://placehold.co/600x300/2a2a2a/a0c4a8?text=Starszy+pies" alt="Wózek dla psa">
+                </div>
+                <div class="card-content">
+                    <h3>Wózki dla psów</h3>
+                    <p>Kiedy warto rozważyć wózek i na co zwrócić uwagę.</p>
+                    <a href="/wozki.html" class="btn">Czytaj więcej</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://placehold.co/600x300/2a2a2a/a0c4a8?text=Suplementy" alt="Suplementy na stawy">
+                </div>
+                <div class="card-content">
+                    <h3>Suplementy na stawy</h3>
+                    <p>Co ma dowody naukowe, a co jest tylko marketingiem.</p>
+                    <a href="/suplementy.html" class="btn">Czytaj więcej</a>
+                </div>
+            </div>
         </div>
-
-        <h3>Najnowsze poradniki:</h3>
-        <ul>
-            <li><a href="/rampy.html">Jak wybrać rampę dla psa seniora – praktyczny poradnik 2026</a></li>
-            <li><a href="/legowiska.html">Najlepsze legowiska ortopedyczne dla starszych psów</a></li>
-            <li><a href="/wozki.html">Wózek dla psa seniora – kiedy warto i na co zwrócić uwagę</a></li>
-            <li><a href="/suplementy.html">Suplementy na stawy dla psa seniora – co naprawdę działa</a></li>
-        </ul>
-    </main>
-
+    </div>
     <footer>
         <p>SeniorPies.pl – serwis informacyjny. Niektóre linki są afiliacyjne.</p>
-        <p><a href="/o-nas.html">O nas</a> · <a href="/kontakt.html">Kontakt</a></p>
     </footer>
 </body>
 </html>
