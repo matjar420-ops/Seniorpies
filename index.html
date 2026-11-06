@@ -12,10 +12,12 @@
         .logo { color: #a0c4a8; font-weight: 600; text-decoration: none; font-size: 1.2rem; }
         .menu-btn { background: #2a2a2a; border: 1px solid #444; color: #a0c4a8; padding: 8px 14px; border-radius: 8px; cursor: pointer; font-size: 0.95rem; }
         .menu-btn:hover { background: #333; }
-        .dropdown { display: none; position: absolute; right: 20px; top: 60px; background: #1e1e1e; border: 1px solid #333; border-radius: 10px; min-width: 220px; z-index: 100; }
+        .dropdown { display: none; position: absolute; right: 20px; top: 60px; background: #1e1e1e; border: 1px solid #333; border-radius: 10px; min-width: 240px; max-height: 320px; z-index: 100; display: flex; flex-direction: column; }
+        .dropdown-scroll { overflow-y: auto; flex: 1; }
         .dropdown a { display: block; padding: 12px 18px; color: #e0e0e0; text-decoration: none; }
         .dropdown a:hover { background: #2a2a2a; }
-        .dropdown.show { display: block; }
+        .dropdown-footer { border-top: 1px solid #333; background: #1a1a1a; }
+        .dropdown.show { display: flex; }
         .hero {
             background: linear-gradient(135deg, #1a3a2a 0%, #2d5a3d 100%);
             color: white;
@@ -61,15 +63,19 @@
     <header>
         <a href="/" class="logo">SeniorPies.pl</a>
         <div style="position: relative;">
-            <button class="menu-btn" onclick="toggleMenu()">☰ Artykuły</button>
+            <button class="menu-btn" onclick="toggleMenu()">☰ Poradniki</button>
             <div class="dropdown" id="menu">
-                <a href="/rampy.html">Jak wybrać rampę</a>
-                <a href="/legowiska.html">Legowiska ortopedyczne</a>
-                <a href="/wozki.html">Wózki dla psów</a>
-                <a href="/suplementy.html">Suplementy na stawy</a>
-                <a href="/schody.html">Jak pomóc psu na schodach</a>
-                <a href="/panele.html">Pies ślizga się na panelach</a>
-                <a href="/o-nas.html">O nas</a>
+                <div class="dropdown-scroll">
+                    <a href="/rampy.html">Jak wybrać rampę</a>
+                    <a href="/legowiska.html">Legowiska ortopedyczne</a>
+                    <a href="/wozki.html">Wózki dla psów</a>
+                    <a href="/suplementy.html">Suplementy na stawy</a>
+                    <a href="/schody.html">Jak pomóc psu na schodach</a>
+                    <a href="/panele.html">Pies ślizga się na panelach</a>
+                </div>
+                <div class="dropdown-footer">
+                    <a href="/o-nas.html">O nas</a>
+                </div>
             </div>
         </div>
     </header>
