@@ -16,9 +16,33 @@
             color: white;
             padding: 100px 20px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
-        .hero h1 { font-size: 3rem; margin-bottom: 15px; }
-        .hero p { font-size: 1.2rem; opacity: 0.85; max-width: 600px; margin: 0 auto; }
+        .hero::before {
+            content: "🐾  🐾  🐾  🐾  🐾";
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            font-size: 1.5rem;
+            opacity: 0.15;
+            letter-spacing: 40px;
+            pointer-events: none;
+        }
+        .hero::after {
+            content: "🐾  🐾  🐾  🐾  🐾";
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            font-size: 1.5rem;
+            opacity: 0.15;
+            letter-spacing: 40px;
+            pointer-events: none;
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 15px; position: relative; z-index: 1; }
+        .hero p { font-size: 1.2rem; opacity: 0.85; max-width: 600px; margin: 0 auto; position: relative; z-index: 1; }
         .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
         .section-title { text-align: center; font-size: 1.8rem; color: #a0c4a8; margin-bottom: 40px; }
         .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
